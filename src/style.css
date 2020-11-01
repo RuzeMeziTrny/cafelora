@@ -236,10 +236,19 @@ nav a:hover {
   height: 100vh;
 
   color: white;
-  background-image: url('./img/gallery.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('./img/gallery.jpg');
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+}
+
+.gallery p {
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 .contacts {
