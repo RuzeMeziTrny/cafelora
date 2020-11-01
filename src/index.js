@@ -1,5 +1,6 @@
 import './index.html';
 import './style.css';
+import { Layer } from './Layer';
 
 console.log('funguju!');
 
@@ -30,3 +31,21 @@ orderBtn.addEventListener('click', () => {
     ordered = true;
   }
 });
+
+const layer1 = {
+  color: '#feeeca',
+  label: 'mléčná pěna',
+};
+
+const layer2 = {
+  color: '#fed7b0',
+  label: 'teplé mléko',
+};
+
+const layer3 = {
+  color: '#613916',
+  label: 'espresso',
+};
+
+const drinkInfo = document.querySelector('.drink__info');
+drinkInfo.innerHTML += Layer(layer1) + Layer(layer2) + Layer(layer3);
