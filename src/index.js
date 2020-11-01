@@ -16,20 +16,43 @@ navLinks.forEach((navLink) => {
   navLink.addEventListener('click', closeNav);
 });
 
-const drinks = {
-  id: 'romano',
-  name: 'Romano',
-  ordered: false,
-  layers: [
-    {
-      color: '#fbdf5b',
-      label: 'citrón',
-    },
-    {
-      color: '#613916',
-      label: 'espresso',
-    },
-  ],
-};
+const drinks = [
+  {
+    id: 'cappuccino',
+    name: 'Cappuccino',
+    ordered: false,
+    layers: [
+      {
+        color: '#feeeca',
+        label: 'mléčná pěna',
+      },
+      {
+        color: '#fed7b0',
+        label: 'teplé mléko',
+      },
+      {
+        color: '#613916',
+        label: 'espresso',
+      },
+    ],
+  },
+  {
+    id: 'romano',
+    name: 'Romano',
+    ordered: false,
+    layers: [
+      {
+        color: '#fbdf5b',
+        label: 'citrón',
+      },
+      {
+        color: '#613916',
+        label: 'espresso',
+      },
+    ],
+  },
+];
 
-document.querySelector('.drinks-list').appendChild(Drink(drinks));
+drinks.forEach((drink) => {
+  document.querySelector('.drinks-list').appendChild(Drink(drink));
+});
